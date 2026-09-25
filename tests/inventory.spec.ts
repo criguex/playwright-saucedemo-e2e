@@ -18,11 +18,16 @@ test.describe('Inventory Page', () => {
     expect(count).toBe(6)
   })
 
-  test('should sort products A to Z by default', async () => {
+  test('should sort products by name A to Z', async () => {
     await inventoryPage.sortBy('az')
-    const prices = await inventoryPage.getProductPrices()
-    const sorted = [...prices].sort((a, b) => a - b)
-    expect(prices).not.toEqual(sorted) // prices unsorted when sorted by name
+    const names = await inventoryPage.getProductNames()
+    expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b)))
+  })
+
+  test('should sort products by name Z to A', async () => {
+    await inventoryPage.sortBy('za')
+    const names = await inventoryPage.getProductNames()
+    expect(names).toEqual([...names].sort((a, b) => b.localeCompare(a)))
   })
 
   test('should sort products by price low to high', async () => {

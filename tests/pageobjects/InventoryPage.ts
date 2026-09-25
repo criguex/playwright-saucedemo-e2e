@@ -8,7 +8,7 @@ export class InventoryPage {
 
   constructor(private readonly page: Page) {
     this.productList = page.locator('.inventory_item')
-    this.sortDropdown = page.locator('[data-test="product_sort_container"]')
+    this.sortDropdown = page.getByRole('combobox', { name: 'Sort products' })
     this.cartBadge = page.locator('.shopping_cart_badge')
     this.cartIcon = page.locator('.shopping_cart_link')
   }
@@ -28,6 +28,10 @@ export class InventoryPage {
 
   async getCartItemCount(): Promise<string> {
     return await this.cartBadge.innerText()
+  }
+
+  async getProductNames(): Promise<string[]> {
+    return await this.page.locator('.inventory_item_name').allInnerTexts()
   }
 
   async getProductPrices(): Promise<number[]> {
