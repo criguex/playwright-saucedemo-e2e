@@ -4,6 +4,33 @@
   <img src="docs/assets/banner.svg" alt="playwright-saucedemo-e2e: end-to-end regression suite for SauceDemo, built on the Page Object Model and run on Chromium, Firefox and WebKit" width="100%">
 </p>
 
+## Explained like you're 8
+
+Imagine a toy shop on the internet. Every time someone changes this project, a robot visits the shop and does what a real customer would do: it logs in, puts things in the cart and pays. If something is broken, the robot tells us before a real person runs into it. It does all of this in three different web browsers, because a page can work in one and break in another.
+
+### A real example
+
+- **Imagine that:** someone whose account is locked (`locked_out_user`) tries to log in.
+- **What should happen:** the shop must say no, with the message "Sorry, this user has been locked out."
+- **What the project does:** the robot types that user and the password, then checks that exact message is on the screen.
+- **What we gain:** if one day the shop let locked people in, this check would turn red right away. On CI, this and the other 32 checks passed.
+
+<p align="center">
+  <img src="docs/assets/explained.gif" alt="Illustrated story: a robot goes shopping, fills the cart with a backpack and a bike light, reads the thank-you page, gets stopped as a locked user, and repeats the tests in three browsers" width="960">
+</p>
+
+The same animation as [MP4](docs/assets/explained.mp4).
+
+### Hard words
+
+| Word | What it means |
+|---|---|
+| Test | A small job for the robot, with one thing it must check |
+| Page Object | A cheat sheet for one page: where each button is, so the tests don't have to remember |
+| Browser | The program you use to open web pages, like Chrome, Firefox or Safari |
+| CI | A robot that runs all the tests every time someone uploads a change |
+| Report | The robot's homework sheet: what passed, what failed, and a video when something breaks |
+
 # Playwright SauceDemo E2E
 
 End-to-end regression suite for [SauceDemo](https://www.saucedemo.com) built with Playwright and TypeScript, structured around the Page Object Model and executed cross-browser on every push.
@@ -72,8 +99,8 @@ npm run report                            # open the last HTML report
 .
 ├── .github/workflows/playwright.yml
 ├── docs/
-│   ├── assets/        banner.svg, how-it-works.svg, how-it-works.gif, how-it-works.mp4
-│   └── scenes/        how-it-works.html + export.sh (rebuild the animation)
+│   ├── assets/        banner.svg, how-it-works.*, explained.* (kids' animation, EN + .es)
+│   └── scenes/        how-it-works.html, explained.html + their export scripts
 ├── tests/
 │   ├── pageobjects/
 │   │   ├── LoginPage.ts
@@ -103,7 +130,7 @@ GitHub Actions (`.github/workflows/playwright.yml`) runs the whole suite on Ubun
 
 ## Rebuilding the animation
 
-`docs/scenes/how-it-works.html` draws each frame from `?t=<seconds>`; `docs/scenes/export.sh` captures the frames with headless Chrome and encodes `how-it-works.gif` and `how-it-works.mp4` with ffmpeg.
+`docs/scenes/how-it-works.html` draws each frame from `?t=<seconds>`; `docs/scenes/export.sh` captures the frames with headless Chrome and encodes `how-it-works.gif` and `how-it-works.mp4` with ffmpeg. `docs/scenes/explained.html` (`?t=<seconds>&lang=en|es`) and `docs/scenes/export-explained.sh` do the same for the kids' animation.
 
 ---
 

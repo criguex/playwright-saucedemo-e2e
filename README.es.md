@@ -4,6 +4,33 @@
   <img src="docs/assets/banner.svg" alt="playwright-saucedemo-e2e: suite de regresión end-to-end para SauceDemo con Page Object Model, en Chromium, Firefox y WebKit" width="100%">
 </p>
 
+## Explicado para un niño de 8 años
+
+Imagina una tienda de juguetes en internet. Cada vez que alguien cambia este proyecto, un robot entra a la tienda y hace lo mismo que haría un cliente de verdad: inicia sesión, mete cosas al carrito y paga. Si algo está dañado, el robot nos avisa antes de que le pase a una persona. Hace todo esto en tres navegadores distintos, porque una página puede funcionar en uno y fallar en otro.
+
+### Un ejemplo real
+
+- **Imagina que:** alguien con la cuenta bloqueada (`locked_out_user`) intenta entrar.
+- **Qué debería pasar:** la tienda tiene que decirle que no, con el mensaje "Sorry, this user has been locked out."
+- **Qué hace el proyecto:** el robot escribe ese usuario y la clave, y revisa que ese mensaje exacto aparezca en la pantalla.
+- **Qué ganamos:** si algún día la tienda dejara entrar a gente bloqueada, esta prueba se pondría en rojo enseguida. En CI pasaron esta y las otras 32 pruebas.
+
+<p align="center">
+  <img src="docs/assets/explained.es.gif" alt="Historia ilustrada: un robot sale de compras, llena el carrito con una mochila y una luz de bicicleta, lee la página de gracias, lo frenan como usuario bloqueado y repite las pruebas en tres navegadores" width="960">
+</p>
+
+La misma animación en [MP4](docs/assets/explained.es.mp4).
+
+### Palabras difíciles
+
+| Palabra | Qué quiere decir |
+|---|---|
+| Prueba (test) | Un trabajito para el robot, con una cosa que tiene que revisar |
+| Page Object | Una chuleta de una página: dónde está cada botón, para que las pruebas no tengan que acordarse |
+| Navegador | El programa con el que abres páginas web, como Chrome, Firefox o Safari |
+| CI | Un robot que corre todas las pruebas cada vez que alguien sube un cambio |
+| Reporte | La hoja de tareas del robot: qué pasó, qué falló y un video cuando algo se daña |
+
 # Playwright SauceDemo E2E
 
 Suite de regresión end-to-end para [SauceDemo](https://www.saucedemo.com) hecha con Playwright y TypeScript, organizada con el Page Object Model y ejecutada en varios navegadores en cada push.
@@ -72,8 +99,8 @@ npm run report                            # abre el último reporte HTML
 .
 ├── .github/workflows/playwright.yml
 ├── docs/
-│   ├── assets/        banner.svg, how-it-works.svg, how-it-works.gif, how-it-works.mp4
-│   └── scenes/        how-it-works.html + export.sh (regenera la animación)
+│   ├── assets/        banner.svg, how-it-works.*, explained.* (animación para niños, EN + .es)
+│   └── scenes/        how-it-works.html, explained.html + sus scripts de export
 ├── tests/
 │   ├── pageobjects/
 │   │   ├── LoginPage.ts
@@ -103,7 +130,7 @@ GitHub Actions (`.github/workflows/playwright.yml`) corre la suite completa en U
 
 ## Regenerar la animación
 
-`docs/scenes/how-it-works.html` dibuja cada cuadro a partir de `?t=<segundos>`; `docs/scenes/export.sh` captura los cuadros con Chrome headless y arma `how-it-works.gif` y `how-it-works.mp4` con ffmpeg.
+`docs/scenes/how-it-works.html` dibuja cada cuadro a partir de `?t=<segundos>`; `docs/scenes/export.sh` captura los cuadros con Chrome headless y arma `how-it-works.gif` y `how-it-works.mp4` con ffmpeg. `docs/scenes/explained.html` (`?t=<segundos>&lang=en|es`) y `docs/scenes/export-explained.sh` hacen lo mismo con la animación para niños.
 
 ---
 
