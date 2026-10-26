@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="500" viewBox="0 0 1280 500">
+<defs>
+<pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#55DFBD" stroke-opacity=".06" stroke-width="1"/></pattern>
+<clipPath id="c"><rect width="1280" height="500" rx="20"/></clipPath>
+<marker id="am" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#55DFBD"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#FB8176"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#FFC56E"/></marker>
+</defs>
+<g clip-path="url(#c)"><rect width="1280" height="500" fill="#071B2B"/><rect width="1280" height="500" fill="url(#g)"/><rect x="0" y="0" width="8" height="500" fill="#55DFBD"/></g>
+<text x="48" y="56" font-family="Menlo,Consolas,monospace" font-size="13" font-weight="normal" fill="#8FA6B0" text-anchor="start" letter-spacing="2.5" xml:space="preserve">PLAYWRIGHT-SAUCEDEMO-E2E · HOW IT WORKS</text>
+<text x="48" y="92" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="28" font-weight="bold" fill="#F4F7F5" text-anchor="start" xml:space="preserve">From spec to three browsers</text>
+<text x="48" y="120" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="15" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">11 tests × 3 browser projects = 33 runs per push. Last CI run on main: 33 passed in 38.7 s.</text>
+<rect x="48" y="150" width="200" height="196" rx="12" fill="#0D2638" stroke="#214456" stroke-width="1.5"/>
+<text x="64" y="174" font-family="Menlo,Consolas,monospace" font-size="11" font-weight="normal" fill="#8FA6B0" text-anchor="start" letter-spacing="0.5" xml:space="preserve">tests/</text>
+<text x="64" y="198" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="17" font-weight="bold" fill="#F4F7F5" text-anchor="start" xml:space="preserve">Specs</text>
+<text x="64" y="223" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">login.spec.ts · 3</text>
+<text x="64" y="242" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">inventory.spec.ts · 6</text>
+<text x="64" y="261" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">checkout.spec.ts · 2</text>
+<text x="64" y="280" font-family="Menlo,Consolas,monospace" font-size="12.5" xml:space="preserve"><tspan fill="#F4F7F5">= 11 tests</tspan></text>
+<rect x="275" y="150" width="240" height="196" rx="12" fill="#0D2638" stroke="#214456" stroke-width="1.5"/>
+<text x="291" y="174" font-family="Menlo,Consolas,monospace" font-size="11" font-weight="normal" fill="#8FA6B0" text-anchor="start" letter-spacing="0.5" xml:space="preserve">tests/pageobjects/</text>
+<text x="291" y="198" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="17" font-weight="bold" fill="#F4F7F5" text-anchor="start" xml:space="preserve">Page Objects</text>
+<text x="291" y="223" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">LoginPage</text>
+<text x="291" y="242" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">InventoryPage</text>
+<text x="291" y="261" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">CartPage</text>
+<text x="291" y="280" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">CheckoutPage</text>
+<text x="291" y="299" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">getByRole · data-test</text>
+<text x="291" y="318" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">specs never touch selectors</text>
+<rect x="542" y="150" width="256" height="196" rx="12" fill="#0D2638" stroke="#214456" stroke-width="1.5"/>
+<text x="558" y="174" font-family="Menlo,Consolas,monospace" font-size="11" font-weight="normal" fill="#8FA6B0" text-anchor="start" letter-spacing="0.5" xml:space="preserve">playwright.config.ts</text>
+<text x="558" y="198" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="17" font-weight="bold" fill="#F4F7F5" text-anchor="start" xml:space="preserve">Playwright runner</text>
+<text x="558" y="223" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">baseURL: saucedemo.com</text>
+<text x="558" y="242" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">fullyParallel: true</text>
+<text x="558" y="261" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">CI: retries 2 · 1 worker</text>
+<text x="558" y="280" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">projects:</text>
+<text x="558" y="299" font-family="Menlo,Consolas,monospace" font-size="12.5" xml:space="preserve"><tspan fill="#F4F7F5">chromium · firefox · webkit</tspan></text>
+<rect x="825" y="150" width="180" height="196" rx="12" fill="#0D2638" stroke="#214456" stroke-width="1.5"/>
+<text x="841" y="174" font-family="Menlo,Consolas,monospace" font-size="11" font-weight="normal" fill="#8FA6B0" text-anchor="start" letter-spacing="0.5" xml:space="preserve">system under test</text>
+<text x="841" y="198" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="17" font-weight="bold" fill="#F4F7F5" text-anchor="start" xml:space="preserve">saucedemo.com</text>
+<text x="841" y="223" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">login</text>
+<text x="841" y="242" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">inventory</text>
+<text x="841" y="261" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">cart</text>
+<text x="841" y="280" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">checkout one/two</text>
+<text x="841" y="299" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">order complete</text>
+<rect x="1032" y="150" width="200" height="196" rx="12" fill="#0D2638" stroke="#214456" stroke-width="1.5"/>
+<text x="1048" y="174" font-family="Menlo,Consolas,monospace" font-size="11" font-weight="normal" fill="#8FA6B0" text-anchor="start" letter-spacing="0.5" xml:space="preserve">output</text>
+<text x="1048" y="198" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="17" font-weight="bold" fill="#F4F7F5" text-anchor="start" xml:space="preserve">Reports</text>
+<text x="1048" y="223" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">list (terminal)</text>
+<text x="1048" y="242" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">HTML report</text>
+<text x="1048" y="261" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" xml:space="preserve"><tspan fill="#FB8176" font-weight="bold">✗</tspan><tspan fill="#F4F7F5"> on failure:</tspan></text>
+<text x="1048" y="280" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">screenshot + video</text>
+<text x="1048" y="299" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#ABC0C8" text-anchor="start" xml:space="preserve">trace on 1st retry</text>
+<path d="M250 248.0 L272 248.0" fill="none" stroke="#55DFBD" stroke-width="2" marker-end="url(#am)"/>
+<path d="M517 248.0 L539 248.0" fill="none" stroke="#55DFBD" stroke-width="2" marker-end="url(#am)"/>
+<path d="M800 248.0 L822 248.0" fill="none" stroke="#55DFBD" stroke-width="2" marker-end="url(#am)"/>
+<path d="M1007 248.0 L1029 248.0" fill="none" stroke="#55DFBD" stroke-width="2" marker-end="url(#am)"/>
+<text x="48" y="384" font-family="Menlo,Consolas,monospace" font-size="12.5" font-weight="normal" fill="#8FA6B0" text-anchor="start" xml:space="preserve">CI · .github/workflows/playwright.yml · ubuntu-latest · every push and pull request to main</text>
+<rect x="48.0" y="398" width="184.0" height="44" rx="8" fill="#123448" stroke="#214456" stroke-width="1.2"/>
+<text x="140.0" y="424.5" font-family="Menlo,Consolas,monospace" font-size="12" font-weight="normal" fill="#F4F7F5" text-anchor="middle" xml:space="preserve">checkout</text>
+<path d="M234.0 420.0 L246.0 420.0" fill="none" stroke="#55DFBD" stroke-width="1.6" marker-end="url(#am)"/>
+<rect x="248.0" y="398" width="184.0" height="44" rx="8" fill="#123448" stroke="#214456" stroke-width="1.2"/>
+<text x="340.0" y="424.5" font-family="Menlo,Consolas,monospace" font-size="12" font-weight="normal" fill="#F4F7F5" text-anchor="middle" xml:space="preserve">setup-node 22</text>
+<path d="M434.0 420.0 L446.0 420.0" fill="none" stroke="#55DFBD" stroke-width="1.6" marker-end="url(#am)"/>
+<rect x="448.0" y="398" width="184.0" height="44" rx="8" fill="#123448" stroke="#214456" stroke-width="1.2"/>
+<text x="540.0" y="424.5" font-family="Menlo,Consolas,monospace" font-size="12" font-weight="normal" fill="#F4F7F5" text-anchor="middle" xml:space="preserve">npm ci</text>
+<path d="M634.0 420.0 L646.0 420.0" fill="none" stroke="#55DFBD" stroke-width="1.6" marker-end="url(#am)"/>
+<rect x="648.0" y="398" width="184.0" height="44" rx="8" fill="#123448" stroke="#214456" stroke-width="1.2"/>
+<text x="740.0" y="416" font-family="Menlo,Consolas,monospace" font-size="12" font-weight="normal" fill="#F4F7F5" text-anchor="middle" xml:space="preserve">playwright install</text>
+<text x="740.0" y="433" font-family="Menlo,Consolas,monospace" font-size="11" font-weight="normal" fill="#ABC0C8" text-anchor="middle" xml:space="preserve">--with-deps</text>
+<path d="M834.0 420.0 L846.0 420.0" fill="none" stroke="#55DFBD" stroke-width="1.6" marker-end="url(#am)"/>
+<rect x="848.0" y="398" width="184.0" height="44" rx="8" fill="#123448" stroke="#214456" stroke-width="1.2"/>
+<text x="940.0" y="416" font-family="Menlo,Consolas,monospace" font-size="12" font-weight="normal" fill="#F4F7F5" text-anchor="middle" xml:space="preserve">npx playwright test</text>
+<text x="940.0" y="433" font-family="Menlo,Consolas,monospace" font-size="11" text-anchor="middle" xml:space="preserve"><tspan fill="#55DFBD" font-weight="bold">✓</tspan><tspan fill="#ABC0C8"> 33 passed (38.7s)</tspan></text>
+<path d="M1034.0 420.0 L1046.0 420.0" fill="none" stroke="#55DFBD" stroke-width="1.6" marker-end="url(#am)"/>
+<rect x="1048.0" y="398" width="184.0" height="44" rx="8" fill="#123448" stroke="#214456" stroke-width="1.2"/>
+<text x="1140.0" y="416" font-family="Menlo,Consolas,monospace" font-size="12" font-weight="normal" fill="#F4F7F5" text-anchor="middle" xml:space="preserve">upload-artifact</text>
+<text x="1140.0" y="433" font-family="Menlo,Consolas,monospace" font-size="11" font-weight="normal" fill="#ABC0C8" text-anchor="middle" xml:space="preserve">playwright-report · 30 d</text>
+<text x="1232" y="478" font-family="Menlo,Consolas,monospace" font-size="13" font-weight="normal" fill="#55DFBD" text-anchor="end" xml:space="preserve">Cristian Guerra · QA · Medellín</text>
+</svg>
